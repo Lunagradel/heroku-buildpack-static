@@ -49,6 +49,7 @@ http {
   <% if proxies.any? %>
     resolver <%= resolver %>;
   <% end %>
+  error_page  405     =200 $uri;
 
   <% if basic_auth %>
     auth_basic "Restricted";
